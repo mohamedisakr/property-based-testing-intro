@@ -9,7 +9,7 @@
 */
 const isValidUsername = (username) => {
   // check for empty string
-  if (validateMinMaxLength(username, 8, 16) === false) {
+  if (validateMinMaxLength(username, 8, 25) === false) {
     return false;
   }
 

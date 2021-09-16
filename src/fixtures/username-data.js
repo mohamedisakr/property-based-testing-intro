@@ -1,3 +1,14 @@
+const positiveTestCases = [
+  // username, expected
+  ["Guiseppe_Reichert", true],
+  ["Randi_Volkman47", true],
+  ["Aurelio90", true],
+  ["Tiffany.White", true],
+  ["Shana.Rutherford5", true],
+  ["Johnnie.Cassin", true],
+  ["Betsy.Brown63", true],
+];
+
 const edgeTestCases = [
   // description, username, expected
   ["should fail for white space", ' {s"h%J!', false],
@@ -9,17 +20,13 @@ const edgeTestCases = [
   ["should fail for special characters", "CRz,:G]^5O", false],
   ["should fail for special characters", "z,:G]^5O", false],
   ["should fail for white space", " ,:G]^5O", false],
-];
-
-const positiveTestCases = [
-  // username, expected
-  ["Guiseppe_Reichert", true],
-  ["Randi_Volkman47", true],
-  ["Aurelio90", true],
-  ["Tiffany.White", true],
-  ["Shana.Rutherford5", true],
-  ["Johnnie.Cassin", true],
-  ["Betsy.Brown63", true],
+  [
+    "should fail for special characters + white spaces",
+    '=OWm^&%{ y!"!#',
+    false,
+  ],
+  ["should fail for special characters + white spaces", '%{ y!"!#', false],
+  ["should fail for special characters + white spaces", ' { y!"!#', false],
 ];
 
 module.exports = { positiveTestCases, edgeTestCases };

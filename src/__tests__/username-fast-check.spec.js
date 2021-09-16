@@ -6,7 +6,7 @@ const {
 
 it.only("should verify username", () => {
   fc.assert(
-    fc.property(fc.string({ minLength: 8, maxLength: 16 }), (username) =>
+    fc.property(fc.string({ minLength: 8, maxLength: 25 }), (username) =>
       isValidUsername(username)
     ),
     { verbose: true }
