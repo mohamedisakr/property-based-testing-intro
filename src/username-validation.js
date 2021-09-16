@@ -8,6 +8,11 @@
       - Underscores (_)
 */
 const isValidUsername = (username) => {
+  // check for empty string
+  if (validateMinMaxLength(username, 8, 16) === false) {
+    return false;
+  }
+
   const regex = /^[a-zA-Z0-9_\.]+$/g;
   if (username.match(regex)) {
     return true;
@@ -15,4 +20,11 @@ const isValidUsername = (username) => {
   return false;
 };
 
-module.exports = isValidUsername;
+const validateMinMaxLength = (username, min, max) => {
+  if (username.length >= min && username.length <= max) {
+    return true;
+  }
+  return false;
+};
+
+module.exports = { isValidUsername, validateMinMaxLength };
