@@ -7,6 +7,26 @@ const positiveTestCases = [
   ["Shana.Rutherford5", true],
   ["Johnnie.Cassin", true],
   ["Betsy.Brown63", true],
+  ["IS2uux8dJ", true],
+  ["S2uux8dJ", true],
+  ["G2uux8dJ", true],
+  ["A2uux8dJ", true],
+  ["dcyi6cgc", true],
+  ["Bcyi6cgc", true],
+  ["1cyi6cgc", true],
+  ["0cyi6cgc", true],
+  [".eukgrQI", true],
+  ["RElRMiO_ds", true],
+  ["lRMiO_ds", true],
+  ["FRMiO_ds", true],
+  ["3RMiO_ds", true],
+  ["1RMiO_ds", true],
+  ["0RMiO_ds", true],
+  ["9htxe9u_k", true],
+  ["htxe9u_k", true],
+  ["Dtxe9u_k", true],
+  ["2txe9u_k", true],
+  [".txe9u_k", true],
 ];
 
 const edgeTestCases = [
@@ -27,6 +47,9 @@ const edgeTestCases = [
   ],
   ["should fail for special characters + white spaces", '%{ y!"!#', false],
   ["should fail for special characters + white spaces", ' { y!"!#', false],
+  ["should fail for special characters", "RrZIBleRR,PVzmK", false],
+  ["should fail for special characters", "RR,PVzmK", false],
+  ["should fail for special characters + white spaces", " R,PVzmK", false],
 ];
 
 module.exports = { positiveTestCases, edgeTestCases };

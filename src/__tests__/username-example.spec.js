@@ -7,7 +7,7 @@ const { isValidUsername } = require("../username-validation");
 describe("username happy test cases", () => {
   it.each(positiveTestCases)(
     // username, actual
-    "%s  %s",
+    "%s should be <%s>",
     (username, actual) => {
       const expected = isValidUsername(username);
       expect(expected).toEqual(actual);
